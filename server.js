@@ -1,7 +1,6 @@
 const express = require("express");
 const cors=require("cors");
 const app = express();
-const port = 3000;
 
 app.use(cors());
 
@@ -12,9 +11,8 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 
 //Simple route
-app.get(
-  (req, res) => {
-    res.json({message:"Welcome to Sidehustle node REST API with express."})
+app.get("/",(req, res) => {
+    res.json({message:"Welcome to Sidehustle node REST API with express."});
   }
 );
 
